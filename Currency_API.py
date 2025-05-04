@@ -10,7 +10,8 @@ res = requests.get(url, params).json()
 try:
     for val, item in res['quotes'].items():
         result.append([val, f'{list(item)[0]}: {list(item.values())[0]}', f'{list(item)[1]}: {list(item.values())[1]}'])
-except:
+except Exception as e:
+    print(e)
     print(res)
     sys.exit()
 
