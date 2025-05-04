@@ -28,7 +28,7 @@ class Calculator:
             print('Ошибка: деление на 0!')
 
 try:
-    operation, a, b = re.search(r'\b(\d+)(.)(\d+)\b', input('Введите выражение (в виде "2+2"): ').replace(' ', '')).group(2, 1, 3)
+    operation, a, b = re.search(r'\b(\d+)(.)(\d+)\b', input('Введите выражение (в виде "2+2"): ').strip(' ', '')).group(2, 1, 3)
     Calculator(operation, int(a), int(b))
 except:
     print('Неверный ввод')
