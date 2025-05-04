@@ -1,5 +1,5 @@
 import requests
-from config import weather_cfg
+from config.global_config import weather_cfg
 
 city = str(input('Введите название города: '))
 url = 'https://api.openweathermap.org/data/2.5/weather'
