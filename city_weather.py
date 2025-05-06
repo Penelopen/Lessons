@@ -7,7 +7,7 @@ cities = ['берлин', 'токио', 'Денвер', 'Пекин', 'брес�
 url = 'https://api.openweathermap.org/data/2.5/weather'
 result = []
 result_columns = ['Время', 'Город', 'Температура']
-now_datetime = datetime.datetime.now().strftime('%d-%d-%Y %H_%M_%S')
+now_datetime = datetime.datetime.now().strftime('%d-%m-%Y %H_%M_%S')
 
 try:
     for city in cities:

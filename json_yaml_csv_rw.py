@@ -1,8 +1,10 @@
 def file_rw(in_data, csv_columns, type_method, file_name):
     import yaml, json, pandas, sys
-    from pathlib import Path
-    file_path = Path(file_name)
-    file_path.parent.mkdir(parents=True, exist_ok=True)
+    from pathlib import Path # Оказался лучше, чем "os", т.к. есть .parent и код короче
+
+    file_name = Path(Path(__file__).parent, file_name) # Склеиваем путь до скрипта с другим
+    file_name.parent.mkdir(parents=True, exist_ok=True) # С помощью .parent отрезаем имя файла
+
     class MyClass:
         data = in_data
         def data_info(self):
@@ -60,4 +62,4 @@ def file_rw(in_data, csv_columns, type_method, file_name):
 
     MyClass.data_info(my_file)
 
-##file_rw(['1', '2', '3'], ['A', 'B', 'C'], 'csv_save', 'log/teeeeeeest.csv')
+##file_rw([['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']], ['A', 'B', 'C'], 'csv_save', 'log/triton/teeeeeeest.csv')
