@@ -1,8 +1,8 @@
 requests
-yaml
-json
+pyyaml
+pyjson
 pandas
-sys
+pysys
 re
 config
 pathlib
