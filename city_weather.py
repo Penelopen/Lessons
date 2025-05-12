@@ -2,8 +2,8 @@ import requests, sys, datetime
 from config.global_config import weather_cfg
 from json_yaml_csv_rw import file_rw
 
-##cities = [str(input(f'Введите название города {i}(5): ')) for i in range(1, 6)]
-cities = ['берлин', 'токио', 'Денвер', 'Пекин', 'брест']
+cities = [str(input(f'Введите название города {i}(5): ')) for i in range(1, 6)]
+##cities = ['берлин', 'токио', 'Денвер', 'Пекин', 'брест']
 url = 'https://api.openweathermap.org/data/2.5/weather'
 result = []
 result_columns = ['Время', 'Город', 'Температура']
