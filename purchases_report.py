@@ -7,14 +7,14 @@ def total_revenue(purchases): ##Общая выручка (цена * колич
 
 
 def items_by_category(purchases): ##Словарь, где ключ — категория, а значение — список уникальных товаров в этой категории
-    new_superspecial_dicto = {}
+    special_dicto = {}
     for d in (purchases):
         try:
-            new_superspecial_dicto[d.get('category')].append(d.get('item'))
+            special_dicto[d.get('category')].append(d.get('item'))
         except KeyError:
-            new_superspecial_dicto[d.get('category')] = [d.get('item')]
+            special_dicto[d.get('category')] = [d.get('item')]
 
-    return f'Товары по категориям: {new_superspecial_dicto}'
+    return f'Товары по категориям: {special_dicto}'
 
 
 def expensive_purchases(purchases, min_price): ##Все покупки, где цена товара больше или равна min_price
@@ -27,17 +27,17 @@ def expensive_purchases(purchases, min_price): ##Все покупки, где �
 
 
 def average_price_by_category(purchases): ##Средняя цена товаров по каждой категории
-    new_superspecial_dicto = {}
+    superspecial_dicto = {}
     for d in (purchases):
         try:
-            new_superspecial_dicto[d.get('category')].append(d.get('price') * d.get('quantity'))
+            superspecial_dicto[d.get('category')].append(d.get('price') * d.get('quantity'))
         except KeyError:
-            new_superspecial_dicto[d.get('category')] = [d.get('price') * d.get('quantity')]
+            superspecial_dicto[d.get('category')] = [d.get('price') * d.get('quantity')]
 
-    for key, value in (new_superspecial_dicto.items()):
-        new_superspecial_dicto[key] = [sum(value) / len(value)]
+    for key, value in (superspecial_dicto.items()):
+        superspecial_dicto[key] = [sum(value) / len(value)]
 
-    return f'Средняя цена по категориям: {new_superspecial_dicto}'
+    return f'Средняя цена по категориям: {superspecial_dicto}'
 
 
 def most_frequent_category(purchases): ##Категория, в которой куплено больше всего единиц товаров (с учётом поля quantity)
