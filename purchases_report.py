@@ -1,14 +1,3 @@
-purchases = []
-with open('purchases.csv') as input, open('Report.txt', 'w') as output:
-
-    input.readline() ##пропускаем первую строку
-    while True:
-        line = input.readline().strip(' ').strip(']').strip(',\n') ##Причёсываем остальные
-        if line == '':
-            break
-        purchases.append(eval(line)) ##Преобразуем строку в словарь
-
-
 def total_revenue(purchases): ##Общая выручка (цена * количество для всех записей)
     total = 0
     for d in (purchases):
@@ -62,8 +51,16 @@ def most_frequent_category(purchases): ##Категория, в которой �
     return f'Категория с наибольшим количеством проданных товаров: {sorted(new_superspecial_dicto, key=lambda x: (x[1]))[-1]}'
 
 
-print(total_revenue(purchases))
-print(items_by_category(purchases))
-print(expensive_purchases(purchases, 1.0))
-print(average_price_by_category(purchases))
-print(most_frequent_category(purchases))
+purchases = []
+with open('purchases.csv') as input, open('Report.txt', 'w') as output:
+
+    input.readline() ##Пропускаем первую строку при считывании файла
+    while True:
+        line = input.readline().strip(' ').strip(']').strip(',\n') ##Причёсываем остальные строки
+        if line == '':
+            break
+        purchases.append(eval(line)) ##Преобразуем строку в словарь
+
+    result = total_revenue(purchases) + '\n' + items_by_category(purchases) + '\n' + expensive_purchases(purchases, 1.0) + '\n' + average_price_by_category(purchases) + '\n' + most_frequent_category(purchases)
+    output.write(result)
+    print(result)
