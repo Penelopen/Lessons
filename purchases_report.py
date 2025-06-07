@@ -10,10 +10,11 @@ def items_by_category(purchases): ##Словарь, где ключ — кате
     special_dicto = {}
     for d in (purchases):
         try:
-            special_dicto[d.get('category')].append(d.get('item'))
-        except KeyError:
+            if d.get('item') not in special_dicto.get(d.get('category')): ##Проверка на уникальность товара в списке словаря
+                special_dicto[d.get('category')].append(d.get('item'))
+        except (KeyError, TypeError):
             special_dicto[d.get('category')] = [d.get('item')]
-
+        print(d.get('item') in special_dicto.get(d.get('category')))
     return f'Товары по категориям: {special_dicto}'
 
 
