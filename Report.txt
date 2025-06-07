@@ -1,5 +1,5 @@
 Общая выручка: 29.5
 Товары по категориям: {'fruit': ['apple', 'banana'], 'dairy': ['milk'], 'bakery': ['bread']}
 Покупки дороже 1.0: {'item': 'apple', 'category': 'fruit', 'price': 1.2, 'quantity': 10}, {'item': 'apple', 'category': 'fruit', 'price': 1.2, 'quantity': 5}, {'item': 'milk', 'category': 'dairy', 'price': 1.5, 'quantity': 2}, {'item': 'bread', 'category': 'bakery', 'price': 2.0, 'quantity': 3}
-Средняя цена по категориям: {'fruit': [6.833333333333333], 'dairy': [3.0], 'bakery': [6.0]}
+Средняя цена по категориям: {'fruit': 6.83, 'dairy': 3.0, 'bakery': 6.0}
 Категория с наибольшим количеством проданных товаров: fruit

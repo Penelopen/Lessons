@@ -14,7 +14,7 @@ def items_by_category(purchases): ##Словарь, где ключ — кате
                 special_dicto[d.get('category')].append(d.get('item'))
         except (KeyError, TypeError):
             special_dicto[d.get('category')] = [d.get('item')]
-        print(d.get('item') in special_dicto.get(d.get('category')))
+
     return f'Товары по категориям: {special_dicto}'
 
 
@@ -36,7 +36,7 @@ def average_price_by_category(purchases): ##Средняя цена товаро
             superspecial_dicto[d.get('category')] = [d.get('price') * d.get('quantity')]
 
     for key, value in (superspecial_dicto.items()):
-        superspecial_dicto[key] = [sum(value) / len(value)]
+        superspecial_dicto[key] = round(sum(value) / len(value), 2)
 
     return f'Средняя цена по категориям: {superspecial_dicto}'
 
