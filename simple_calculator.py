@@ -31,4 +31,4 @@ try:
     operation, a, b = re.search(r'\.*(\d+)\s*(.)\s*(\d+)\.*', input('Введите выражение (в виде "2+2"): ').strip(' ')).group(2, 1, 3)
     Calculator(operation, int(a), int(b))
 except:
-    print('Неверный ввод')
+    print('Неверный ввод!')
