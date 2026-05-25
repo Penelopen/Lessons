@@ -17,19 +17,12 @@
 
 ---
 
-### 📚 Требуемые библиотеки
+### 🚀 Запуск
 
-Для работы этих программ требуется установка некоторых библиотек. Команды для терминала Windows:
+Для установки всех внешних зависимостей (requests, pyyaml, pandas) выполнить в терминале:
 
-```bash
-  pip install requests
-  pip install pyyaml
-  pip install pyjson
-  pip install PySys
-  pip install pandas
-  pip install pathlib
-  pip install DateTime
-```
+pip install -r requirements.txt
+
 
 ### 🧠 Дополнительно
 
