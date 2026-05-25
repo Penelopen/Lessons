@@ -1,0 +1,54 @@
+id;full_name;amount;created_at;email;comment
+1;"Иван Иванов";1500.50;2026-03-01;ivan@test.com;Normal row
+2;Алексей Петров;NOT_A_NUMBER;02/03/2026;petrov@test.com;String in numeric column
+3;"Ольга "Супер" Сидорова";2100,75;2026.03.03;olga@test.ru;Broken quotes
+;Unknown;0;9999-99-99;bad_email;Null ID and impossible date
+5;Длинный_Текст_Который_Сломает_VARCHAR_Если_Нет_Лимита_Символов_В_БАЗЕ_ДАННЫХ_А_ТУТ_ЕЩЕ_БОЛЬШЕ_БУКВ;500;2026-03-05;test@test.com;Overlength
+6;Матвей;400;2026-03-06;;Empty email
+7;Рита;300;06-03-2026;rita@test.com;EXTRA_COLUMN;Something extra here
+8; (Broken);100;2026-03-08;err@test.com;Encoding nightmare
+9;;;;;Empty row except separators
+
+10;"Разрыв
+строки";900;2026-03-10;wrap@test.com;Multiline text inside quotes
+11;Stepan;100.00;2026-02-30;step@mail.ru;Non-existent Feb 30
+12;Gleb;-500;2026-03-12;gleb@test.com;Negative price
+13;Marina;" 1 200 ";2026-03-13;mar@test.com;Spaces inside number
+14;Ivan;100;2026/13/01;ivan2@test.com;Month > 12
+15;Petr;200;12-Jan-2026;petr@test.com;Month as string
+16;Oleg;300;2026-03-16;oleg@test.com;Duplicate ID (if 16 exists twice)
+16;Oleg_Double;300;2026-03-16;oleg@test.com;Duplicate ID
+17;Svetlana;NULL;2026-03-17;sveta@test.com;String "NULL" instead of empty
+18;Dmitry;infinity;2026-03-18;dm@test.com;Infinity value
+19;Elena;0.00000000000001;2026-03-19;el@test.com;Precision issue
+20;Victor;1000;2026-03-20;victor@test.com
+21;Anna;2100;2026-03-21;anna@test.com;No quote end"
+22;"Broken;Separator";500;2026-03-22;sep@test.com;Separator inside quotes
+23;Kirill;100;21-03-2026;kir@test.com;European date format
+;Yana;200;03/24/26;yana@test.com;US short date format
+25;Boris;300;2026-03-25;boris@test.com;
+26;Inna;400;2026-03-26;inna@test.com;
+27;Zhenya;500;2026-03-27;zh@test.com;
+28;Oksana;600;2026-03-28;ok@test.com;
+29;Leonid;700;2026-03-29;leo@test.com;
+;Mariya;800;2026-03-30;mar@test.com;
+31;Nadezhda;900;2026-03-31;nad@test.com;
+32;Artem;1000;2026-04-01;art@test.com;
+33;Daria;1100;2026-04-02;dar@test.com;
+34;Fedor;1200;2026-04-03;fed@test.com;
+35;Yulia;1300;2026-04-04;yul@test.com;
+36;Kostya;1400;2026-04-05;kos@test.com;
+37;Valera;1500;2026-04-06;val@test.com;
+38;Stas;1600;2026-04-07;stas@test.com;
+39;Vera;1700;2026-04-08;vera@test.com;
+40;Gena;1800;2026-04-09;gena@test.com;
+41;Ulyana;1900;2026-04-10;ul@test.com;
+42;Makar;2000;2026-04-11;mak@test.com;
+43;Zoya;2100;2026-04-12;zoya@test.com;
+44;Egor;2200;2026-04-13;egor@test.com;
+45;Alina;2300;2026-04-14;alina@test.com;
+46;Timur;2400;2026-04-15;tim@test.com;
+47;Liza;2500;2026-04-16;liza@test.com;
+48;Grisha;2600;2026-04-17;gri@test.com;
+49;Sasha;2700;2026-04-18;sash@test.com;
+50;Pavel;2800;2026-04-19;pavel@test.com;Last row
